@@ -1,8 +1,6 @@
 MobileWorkshop
 ==============
 
-Initiales clonen des repositories:
-
 git clone https://github.com/tobiaszuercher/MobileWorkshop.git
 
 Es kann auch ohne git gearbeitet werden: https://github.com/tobiaszuercher/MobileWorkshop/releases
@@ -14,6 +12,8 @@ git checkout aufgabe-1 für die Ausgangslage.
 
 ### Aufgabe 2: Jumplist
 Jumplist einbauen. Detaillierte hilfe kann unter http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj244365(v=vs.105).aspx gefunden werden. Die Hilfsklasse ist bereits im Projekt.
+
+Beispiellösung für Aufgabe 1+2: git checkout loesung-2
 
 ### Aufgabe 3: Navigation zu Detail Page
 
