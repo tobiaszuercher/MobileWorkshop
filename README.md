@@ -5,7 +5,7 @@ Initiales clonen des repositories:
 
 git clone https://github.com/tobiaszuercher/MobileWorkshop.git
 
-## Aufgabe 1: Liste Darstellen
+### Aufgabe 1: Liste Darstellen
 
 git checkout aufgabe-1 für die Ausgangslage.
 * MainPage.xaml: Mithilfe des LongListSelector die Customers anzeigen
