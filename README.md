@@ -6,7 +6,7 @@ Mit git:
 
 Es kann auch ohne git gearbeitet werden: https://github.com/tobiaszuercher/MobileWorkshop/releases (Jeweils das Tag herunterladen dass in der aufgabe steht).
 
-*Starte das Visual Studio mit Adminrechten, ansonsten gibts Ärger mit IIS*
+**Starte das Visual Studio mit Adminrechten, ansonsten gibts Ärger mit IIS**
 
 ACHTUNG:
 Die Startkonfiguration geht auf http://mega-crm.azurewebsites.net/customer, die VM braucht also Internet. Der Service kann jedoch auch lokal gehosted werden, jedoch muss dann in der Adresse der Hostname stehen und nicht "localhost" (der Emulator ist eine "echte" VM). In der Settings.cs Klasse könnt ihr dies entsprechend anpassen.
@@ -20,7 +20,7 @@ Die Startkonfiguration geht auf http://mega-crm.azurewebsites.net/customer, die 
 ### Aufgabe 2: Jumplist
 Jumplist einbauen. Detaillierte hilfe kann unter http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj244365(v=vs.105).aspx gefunden werden. Die Hilfsklasse ist bereits im Projekt.
 
-Beispiellösung für Aufgabe 1+2: git checkout loesung-2
+Beispiellösung für Aufgabe 1+2: `git checkout loesung-2`
 
 ### Aufgabe 3: Navigation zu Detail Page
 
@@ -48,7 +48,7 @@ Musterlösung: `git checkout loesung-4`
 ### Aufgabe 6: Delete Customer
 * Keine tipps, das sollte nun alleine machbar sein :)
 
-Musterlösung für die komplette CRUD Anwendung: git checkout loesung-4
+Musterlösung für die komplette CRUD Anwendung: `git checkout loesung-4`
 
 # Weitere Aufgaben
 
@@ -81,9 +81,6 @@ http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207045(v=vs.105).
 *Text-To-Speech: Das Telefon sagt die Kontaktdetails
 http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206958(v=vs.105).aspx
 http://channel9.msdn.com/Series/Building-Apps-for-Windows-Phone-8-Jump-Start/Building-Apps-for-Windows-Phone-8-Jump-Start-13-Speech-Input-in-Windows-Phone-8
-
-var synth = new SpeechSynthesizer();
-await synth.SpeakTextAsync("....");
 
 
 
