@@ -2,16 +2,18 @@ MobileWorkshop
 ==============
 
 Mit git:
-git clone https://github.com/tobiaszuercher/MobileWorkshop.git
+`git clone https://github.com/tobiaszuercher/MobileWorkshop.git`
 
-Es kann auch ohne git gearbeitet werden: https://github.com/tobiaszuercher/MobileWorkshop/releases (Jeweils das Tag herunterladen dass in der aufgabe steht)
+Es kann auch ohne git gearbeitet werden: https://github.com/tobiaszuercher/MobileWorkshop/releases (Jeweils das Tag herunterladen dass in der aufgabe steht).
+
+*Starte das Visual Studio mit Adminrechten, ansonsten gibts Ärger mit IIS*
 
 ACHTUNG:
 Die Startkonfiguration geht auf http://mega-crm.azurewebsites.net/customer, die VM braucht also Internet. Der Service kann jedoch auch lokal gehosted werden, jedoch muss dann in der Adresse der Hostname stehen und nicht "localhost" (der Emulator ist eine "echte" VM). In der Settings.cs Klasse könnt ihr dies entsprechend anpassen.
 
 ### Aufgabe 1: Liste Darstellen
 
-git checkout aufgabe-1 für die Ausgangslage.
+`git checkout aufgabe-1` für die Ausgangslage.
 * MainPage.xaml: Mithilfe des LongListSelector die Customers anzeigen
 * DataTemplate anpassen
 
@@ -22,7 +24,7 @@ Beispiellösung für Aufgabe 1+2: git checkout loesung-2
 
 ### Aufgabe 3: Navigation zu Detail Page
 
-git checkout aufgabe-3 für Ausgangslage (kann auch von deiner Lösung weiter gearbeitet werden)
+`git checkout aufgabe-3` für Ausgangslage (kann auch von deiner Lösung weiter gearbeitet werden)
 
 * SelectionChanged Event im LongListSelector registrieren und implementieren
 * Mithilfe des NavigationService navigieren
@@ -30,12 +32,12 @@ git checkout aufgabe-3 für Ausgangslage (kann auch von deiner Lösung weiter ge
 
 
 ### Aufgabe 4: Refresh Button auf MainPage
-git checkout loesung-3 (kann auch von deiner Lösung weiter gearbeitet werden)
+`git checkout loesung-3` (kann auch von deiner Lösung weiter gearbeitet werden)
 
 * Refresh Button Hinzufügen
 * Im ButtonClick Handler kann via App auf den UI Service zugegriffen werden
 
-Musterlösung: git checkout loesung-4
+Musterlösung: `git checkout loesung-4`
 
 ### Aufgabe 5: Add Customer
 
