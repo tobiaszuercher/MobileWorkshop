@@ -28,6 +28,12 @@ namespace ZTG.Customer.Client.WP8
             // Set the page's ApplicationBar to a new instance of ApplicationBar.
             ApplicationBar = new ApplicationBar();
 
+            // Create a new button and set the text value to the localized string from AppResources.
+            var addAppBarButton = new ApplicationBarIconButton(new Uri("/Images/add.png", UriKind.Relative));
+            addAppBarButton.Text = AppResources.Add;
+            addAppBarButton.Click += AddButtonOnClick;
+            ApplicationBar.Buttons.Add(addAppBarButton);
+
             var updateAppBarButton = new ApplicationBarIconButton(new Uri("/Images/refresh.png", UriKind.Relative));
             updateAppBarButton.Text = AppResources.Update;
             updateAppBarButton.Click += RefreshButtonOnClick;
@@ -40,11 +46,16 @@ namespace ZTG.Customer.Client.WP8
             base.OnNavigatedTo(e);
         }
 
+        private void AddButtonOnClick(object sender, EventArgs e)
+        {
+            var id = App.CustomerUiService.NewCustomer();
+            NavigationService.Navigate(new Uri("/CustomerDetailPage.xaml?ID=" + id, UriKind.Relative));
+        }
+
         private void RefreshButtonOnClick(object sender, EventArgs e)
         {
             App.CustomerUiService.LoadCustomers();
         }
-
 
         private void _customerList_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
