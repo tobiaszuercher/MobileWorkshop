@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Json;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Deserializers;
-using RestSharp.Serializers;
 
 namespace ZTG.Customer.Client.WP8.Helper
 {

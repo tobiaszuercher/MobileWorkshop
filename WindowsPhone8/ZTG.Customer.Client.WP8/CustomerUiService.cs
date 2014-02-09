@@ -29,6 +29,7 @@ namespace ZTG.Customer.Client.WP8
         {
             SelectedCustomer = null;
             Customers.Clear();
+            CustomersGroup.Clear();
             _restClient.Get<List<Model.Customer>>(Callback);
         }
 
@@ -55,19 +56,19 @@ namespace ZTG.Customer.Client.WP8
             SelectedCustomer = Customers.First(x => x.Id == customerId);
         }
 
-        public void SaveSelectedCustomer()
+        public void SaveSelectedCustomer(Action callback)
         {
             if (SelectedCustomer != null)
             {
-                _restClient.Put(SelectedCustomer);
+                _restClient.Put(SelectedCustomer, callback);
             }
         }
 
-        public void DeleteSelectedCustomer()
+        public void DeleteSelectedCustomer(Action callback)
         {
             if (SelectedCustomer != null)
             {
-                _restClient.Delete<CustomerViewModel>(SelectedCustomer.Id);
+                _restClient.Delete<CustomerViewModel>(SelectedCustomer.Id, callback);
                 Customers.Remove(SelectedCustomer);
                 SelectedCustomer = null;
             }
@@ -79,9 +80,10 @@ namespace ZTG.Customer.Client.WP8
             var newCustomer = new CustomerViewModel(new Model.Customer()
                 {
                     FirstName = "New",
+                    LastName = "New",
                     Id = id
                 });
-            _restClient.Post(newCustomer);
+            _restClient.Post(newCustomer, () => {});
             Customers.Add(newCustomer);
             SelectedCustomer = newCustomer;
             return id;

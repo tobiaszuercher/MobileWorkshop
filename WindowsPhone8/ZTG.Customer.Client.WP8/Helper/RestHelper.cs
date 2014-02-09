@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
 using RestSharp;
 
 namespace ZTG.Customer.Client.WP8.Helper
@@ -30,26 +27,38 @@ namespace ZTG.Customer.Client.WP8.Helper
                 });
         }
 
-        public void Put<T>(T obj)
+        public void Put<T>(T obj, Action callback)
         {
             var putRequest = new RestRequest(Settings.CustomerUrl, Method.PUT) {RequestFormat = DataFormat.Json};
             putRequest.JsonSerializer = new CustomJsonSerializer();
             putRequest.AddBody(obj);
-            _restClient.ExecuteAsync(putRequest, HandleResponse<T>);
+            _restClient.ExecuteAsync(putRequest, response =>
+            {
+                HandleResponse<T>(response);
+                callback();
+            });
         }
 
-        public void Delete<T>(int id)
+        public void Delete<T>(int id, Action callback)
         {
             var putRequest = new RestRequest(Settings.CustomerUrl + @"/" + id, Method.DELETE);
-            _restClient.ExecuteAsync(putRequest, HandleResponse<T>);
+            _restClient.ExecuteAsync(putRequest, response =>
+            {
+                HandleResponse<T>(response);
+                callback();
+            });
         }
 
-        public void Post<T>(T obj)
+        public void Post<T>(T obj, Action callback)
         {
             var putRequest = new RestRequest(Settings.CustomerUrl, Method.POST) { RequestFormat = DataFormat.Json };
             putRequest.JsonSerializer = new CustomJsonSerializer();
             putRequest.AddBody(obj);
-            _restClient.ExecuteAsync(putRequest, HandleResponse<T>);
+            _restClient.ExecuteAsync(putRequest, response =>
+            {
+                HandleResponse<T>(response);
+                callback();
+            });
         }
 
         private void HandleResponse<T>(IRestResponse response)
