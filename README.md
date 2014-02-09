@@ -10,7 +10,7 @@ git clone https://github.com/tobiaszuercher/MobileWorkshop.git
 git checkout aufgabe-1 für die Ausgangslage.
 * MainPage.xaml: Mithilfe des LongListSelector die Customers anzeigen
 
-## Aufgabe 2: Jumplist
+### Aufgabe 2: Jumplist
 Jumplist einbauen. Detaillierte hilfe kann unter http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj244365(v=vs.105).aspx gefunden werden. Die Hilfsklasse ist bereits im Projekt.
 
 ### Aufgabe 3: Navigation zu Detail Page
@@ -40,7 +40,9 @@ Musterlösung: git checkout loesung-4
 ### Aufgabe 6: Delete Customer
 * Keine tipps, das sollte nun alleine machbar sein :)
 
-Musterlösung für die komplette CRUD Anwendung: git checkout loesung-4 
+Musterlösung für die komplette CRUD Anwendung: git checkout loesung-4
+
+# Weitere Aufgaben
 
 Nun hast du eine funktionierende Applikation um deine Kunden zu Verwalten. Es steht dir frei einige Bereiche aus der Windows Phone 8 Welt selber auszuprobieren. Hier einige Ideen:
 
