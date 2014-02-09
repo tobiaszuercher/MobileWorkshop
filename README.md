@@ -41,3 +41,39 @@ Musterlösung: git checkout loesung-4
 * Keine tipps, das sollte nun alleine machbar sein :)
 
 Musterlösung für die komplette CRUD Anwendung: git checkout loesung-4 
+
+Nun hast du eine funktionierende Applikation um deine Kunden zu Verwalten. Es steht dir frei einige Bereiche aus der Windows Phone 8 Welt selber auszuprobieren. Hier einige Ideen:
+
+### Live Tiles implementieren (Random Customer anzeigen)
+http://developer.nokia.com/community/wiki/Live_Tile_Templates_in_Windows_Phone_8
+http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202948(v=vs.105).aspx
+
+### App-To-App Communication
+*z.B. vCard file extension mit App Registrieren
+*vCard anderer App senden oder empfangen
+
+http://de.wikipedia.org/wiki/VCard
+http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206987(v=vs.105).aspx
+
+### NFC
+Kontakt sharen beim Berühren zweier Devices.
+http://www.silverlightshow.net/items/Windows-Phone-8-NFC-Near-Field-Communication.aspx
+http://blogs.msdn.com/b/windowsappdev/archive/2013/04/18/develop-a-cutting-edge-app-with-nfc.aspx
+http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207060(v=vs.105).aspx
+
+### Maps & Location
+* Kunden auf Karte anzeigen
+* Kunde in der Nähe anzeigen
+http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207045(v=vs.105).aspx
+
+### Speech & Voice
+*Voice Command "Call" auf Kontakt
+*Text-To-Speech: Das Telefon sagt die Kontaktdetails
+http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206958(v=vs.105).aspx
+http://channel9.msdn.com/Series/Building-Apps-for-Windows-Phone-8-Jump-Start/Building-Apps-for-Windows-Phone-8-Jump-Start-13-Speech-Input-in-Windows-Phone-8
+
+var synth = new SpeechSynthesizer();
+await synth.SpeakTextAsync("....");
+
+
+
