@@ -5,6 +5,8 @@ Initiales clonen des repositories:
 
 git clone https://github.com/tobiaszuercher/MobileWorkshop.git
 
+Es kann auch ohne git gearbeitet werden: https://github.com/tobiaszuercher/MobileWorkshop/releases
+
 ### Aufgabe 1: Liste Darstellen
 
 git checkout aufgabe-1 für die Ausgangslage.
