@@ -17,7 +17,7 @@ Beispiellösung für Aufgabe 1+2: git checkout loesung-2
 
 ### Aufgabe 3: Navigation zu Detail Page
 
-git checkout aufgabe-3 für Ausgangslage
+git checkout aufgabe-3 für Ausgangslage (kann auch von deiner Lösung weiter gearbeitet werden)
 
 * SelectionChanged Event im LongListSelector registrieren und implementieren
 * Mithilfe des NavigationService navigieren
