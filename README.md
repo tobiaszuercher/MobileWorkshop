@@ -1,14 +1,19 @@
 MobileWorkshop
 ==============
 
+Mit git:
 git clone https://github.com/tobiaszuercher/MobileWorkshop.git
 
-Es kann auch ohne git gearbeitet werden: https://github.com/tobiaszuercher/MobileWorkshop/releases
+Es kann auch ohne git gearbeitet werden: https://github.com/tobiaszuercher/MobileWorkshop/releases (Jeweils das Tag herunterladen dass in der aufgabe steht)
+
+ACHTUNG:
+Die Startkonfiguration geht auf http://mega-crm.azurewebsites.net/customer, die VM braucht also Internet. Der Service kann jedoch auch lokal gehosted werden, jedoch muss dann in der Adresse der Hostname stehen und nicht "localhost" (der Emulator ist eine "echte" VM). In der Settings.cs Klasse könnt ihr dies entsprechend anpassen.
 
 ### Aufgabe 1: Liste Darstellen
 
 git checkout aufgabe-1 für die Ausgangslage.
 * MainPage.xaml: Mithilfe des LongListSelector die Customers anzeigen
+* DataTemplate anpassen
 
 ### Aufgabe 2: Jumplist
 Jumplist einbauen. Detaillierte hilfe kann unter http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj244365(v=vs.105).aspx gefunden werden. Die Hilfsklasse ist bereits im Projekt.
