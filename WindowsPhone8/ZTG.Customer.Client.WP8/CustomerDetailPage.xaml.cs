@@ -4,6 +4,7 @@ using System.Windows.Input;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using ZTG.Customer.Client.WP8.Resources;
 
 namespace ZTG.Customer.Client.WP8
 {
@@ -12,13 +13,6 @@ namespace ZTG.Customer.Client.WP8
         public CustomerDetailPage()
         {
             InitializeComponent();
-            BuildLocalizedApplicationBar();
-        }
-
-        private void BuildLocalizedApplicationBar()
-        {
-            // Set the page's ApplicationBar to a new instance of ApplicationBar.
-            ApplicationBar = new ApplicationBar();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

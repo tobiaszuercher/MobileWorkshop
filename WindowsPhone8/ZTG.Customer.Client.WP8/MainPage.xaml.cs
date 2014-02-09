@@ -2,6 +2,8 @@
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using ZTG.Customer.Client.WP8.Resources;
 
 namespace ZTG.Customer.Client.WP8
 {
@@ -11,6 +13,7 @@ namespace ZTG.Customer.Client.WP8
         public MainPage()
         {
             InitializeComponent();
+            BuildLocalizedApplicationBar();
             ViewModel = new MainPageViewModel();
         }
 
@@ -20,11 +23,28 @@ namespace ZTG.Customer.Client.WP8
             set { DataContext = value; }
         }
 
+        private void BuildLocalizedApplicationBar()
+        {
+            // Set the page's ApplicationBar to a new instance of ApplicationBar.
+            ApplicationBar = new ApplicationBar();
+
+            var updateAppBarButton = new ApplicationBarIconButton(new Uri("/Images/refresh.png", UriKind.Relative));
+            updateAppBarButton.Text = AppResources.Update;
+            updateAppBarButton.Click += RefreshButtonOnClick;
+            ApplicationBar.Buttons.Add(updateAppBarButton);
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             App.CustomerUiService.LoadCustomers();
             base.OnNavigatedTo(e);
         }
+
+        private void RefreshButtonOnClick(object sender, EventArgs e)
+        {
+            App.CustomerUiService.LoadCustomers();
+        }
+
 
         private void _customerList_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
