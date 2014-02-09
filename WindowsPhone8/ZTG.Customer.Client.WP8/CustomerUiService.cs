@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Newtonsoft.Json;
-using RestSharp;
 using ZTG.Customer.Client.WP8.Helper;
 
 namespace ZTG.Customer.Client.WP8
@@ -29,7 +27,6 @@ namespace ZTG.Customer.Client.WP8
         {
             SelectedCustomer = null;
             Customers.Clear();
-            CustomersGroup.Clear();
             _restClient.Get<List<Model.Customer>>(Callback);
         }
 
@@ -80,7 +77,6 @@ namespace ZTG.Customer.Client.WP8
             var newCustomer = new CustomerViewModel(new Model.Customer()
                 {
                     FirstName = "New",
-                    LastName = "New",
                     Id = id
                 });
             _restClient.Post(newCustomer, () => {});
