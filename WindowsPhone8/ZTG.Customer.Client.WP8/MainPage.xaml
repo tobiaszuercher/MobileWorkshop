@@ -81,6 +81,7 @@
                                     LayoutMode="List" IsGroupingEnabled="True" 
                                     JumpListStyle="{StaticResource CustomerJumpListStyle}"
                                     GroupHeaderTemplate="{StaticResource CustomerGroupHeaderTemplate}"
+                                    SelectionChanged="_customerList_OnSelectionChanged"
                                     HideEmptyGroups ="true">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>

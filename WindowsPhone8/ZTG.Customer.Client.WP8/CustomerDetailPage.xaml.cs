@@ -1,5 +1,7 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -17,6 +19,17 @@ namespace ZTG.Customer.Client.WP8
         {
             // Set the page's ApplicationBar to a new instance of ApplicationBar.
             ApplicationBar = new ApplicationBar();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            var customerId = string.Empty;
+            if (NavigationContext.QueryString.TryGetValue("ID", out customerId))
+            {
+                App.CustomerUiService.SelectCustomer(Convert.ToInt32(customerId));
+                DataContext = App.CustomerUiService.SelectedCustomer;
+            }
         }
 
         /// <summary>

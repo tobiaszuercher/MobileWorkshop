@@ -1,6 +1,7 @@
-﻿using System.Windows.Navigation;
+﻿using System;
+using System.Windows.Controls;
+using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
 
 namespace ZTG.Customer.Client.WP8
 {
@@ -23,6 +24,15 @@ namespace ZTG.Customer.Client.WP8
         {
             App.CustomerUiService.LoadCustomers();
             base.OnNavigatedTo(e);
+        }
+
+        private void _customerList_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_customerList.SelectedItem != null)
+            {
+                var customerViewModel = (_customerList.SelectedItem as CustomerViewModel);
+                NavigationService.Navigate(new Uri("/CustomerDetailPage.xaml?ID=" + customerViewModel.Id, UriKind.Relative));
+            }
         }
     }
 }
