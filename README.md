@@ -17,7 +17,6 @@ Jumplist einbauen. Detaillierte hilfe kann unter http://msdn.microsoft.com/en-us
 
 git checkout aufgabe-3 für Ausgangslage
 
-Navigation Nach
 * SelectionChanged Event im LongListSelector registrieren und implementieren
 * Mithilfe des NavigationService navigieren
 * Bei CustomerDetailPage OnNavigatedTo überschreiben & DataContext setzen
