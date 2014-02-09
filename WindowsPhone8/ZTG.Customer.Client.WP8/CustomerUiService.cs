@@ -74,6 +74,7 @@ namespace ZTG.Customer.Client.WP8
         public int NewCustomer()
         {
             var id = Customers.Max(x => x.Id) + 1;
+            
             var newCustomer = new CustomerViewModel(new Model.Customer()
                 {
                     FirstName = "New",
